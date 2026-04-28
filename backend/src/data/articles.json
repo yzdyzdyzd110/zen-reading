@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "title": "The Lost City of Atlantis",
+    "description": "Explore the enduring legend of a sunken civilization and what modern science has uncovered.",
+    "difficulty": 2,
+    "image": "/covers/cover_1.png",
+    "gradient": "linear-gradient(135deg, #0a2a5e, #14538a, #2b8ab5)",
+    "content": "For more than two thousand years, the story of Atlantis has captivated the human imagination. First described by the Greek philosopher Plato around 360 BCE, Atlantis was said to be a powerful and advanced kingdom that sank into the sea in a single day and night of misfortune.\n\nPlato described Atlantis as a land of great wealth and natural beauty. Its capital city was built on a hill and surrounded by rings of water and land, connected by bridges and tunnels. The Atlanteans were said to be skilled engineers who built complex canals, temples, and harbors.\n\nAccording to the legend, the Atlanteans became greedy and corrupt over time. As punishment for their moral decay, the gods sent earthquakes and floods that destroyed the civilization and submerged it beneath the Atlantic Ocean.\n\nModern researchers have proposed numerous locations for the lost city, including the Mediterranean island of Santorini, which was devastated by a volcanic eruption around 1600 BCE. Others suggest locations near the Bahamas, Cuba, or even Antarctica. Despite extensive searches using sonar and underwater archaeology, no conclusive evidence of Atlantis has ever been found.\n\nMany scholars believe Plato created the story as an allegory about the dangers of hubris and the ideal state. Whether myth or memory of a real catastrophe, Atlantis continues to inspire books, films, and expeditions to this day.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "According to Plato, why did the gods destroy Atlantis?",
+        "options": ["The Atlanteans became greedy and corrupt", "The Atlanteans started a war with Greece", "A natural disaster struck the city", "The Atlanteans abandoned their religion"],
+        "answer": 0
+      },
+      {
+        "id": 2,
+        "text": "Which real-world location is mentioned as a possible inspiration for Atlantis?",
+        "options": ["The Bahamas", "Santorini", "Antarctica", "Cuba"],
+        "answer": 1
+      },
+      {
+        "id": 3,
+        "text": "What do many scholars believe about Plato's story?",
+        "options": ["It is a completely accurate historical record", "It is an allegory about hubris", "It was copied from Egyptian texts", "It describes the city of Rome"],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "The Art of Deep Focus",
+    "description": "How mindfulness and single-tasking can transform your productivity in an age of constant distraction.",
+    "difficulty": 3,
+    "image": "/covers/cover_2.png",
+    "gradient": "linear-gradient(135deg, #6b3a2a, #a0523c, #d4946a)",
+    "content": "In an era defined by notifications, endless scrolling, and the constant ping of messages, the ability to focus deeply on a single task has become a rare and valuable skill. Research suggests that the average office worker is interrupted every eleven minutes, and it can take over twenty minutes to regain the same level of concentration.\n\nCal Newport, author of the influential book Deep Work, argues that the ability to focus without distraction on a cognitively demanding task is becoming increasingly rare at the same time it is becoming increasingly valuable in our economy. Those who can master deep focus will thrive.\n\nThe first step toward deep focus is creating the right environment. This means silencing your phone, closing unnecessary browser tabs, and finding a quiet space. Some practitioners use noise-cancelling headphones with white noise or nature sounds to block out ambient distractions.\n\nEqually important is training your attention span like a muscle. Start with short bursts — perhaps twenty-five minutes of uninterrupted work followed by a five-minute break, a technique known as the Pomodoro Method. Gradually extend these sessions as your concentration improves.\n\nFinally, embrace boredom. In a world where we habitually reach for our phones during any idle moment, learning to sit still with your thoughts is a form of mental training. Allow your mind to wander without digital input, and you may find your best ideas emerging from the silence.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "According to the article, how often is the average office worker interrupted?",
+        "options": ["Every 5 minutes", "Every 11 minutes", "Every 20 minutes", "Every 30 minutes"],
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "text": "What technique involves 25 minutes of work followed by a 5-minute break?",
+        "options": ["Deep Work", "Time Blocking", "The Pomodoro Method", "Mind Mapping"],
+        "answer": 2
+      },
+      {
+        "id": 3,
+        "text": "What does Cal Newport argue about deep focus?",
+        "options": ["It is a natural talent that cannot be learned", "It is becoming rarer and more valuable", "It is less important than multitasking", "It only matters in creative fields"],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "The Science of White Noise",
+    "description": "Understanding how ambient sound affects concentration, memory, and cognitive performance.",
+    "difficulty": 4,
+    "image": "/covers/cover_3.png",
+    "gradient": "linear-gradient(135deg, #2d2d5e, #484882, #6e6eaa)",
+    "content": "White noise — a consistent sound that contains all frequencies across the audible spectrum at equal intensity — has been studied extensively for its effects on concentration, sleep, and cognitive performance. Its name derives from white light, which contains all colors of light combined.\n\nThe mechanism behind white noise's effectiveness lies in a phenomenon called stochastic resonance. When a steady background noise is present, the brain's auditory system becomes more sensitive to detecting signals above that noise floor. This can paradoxically make it easier to focus on the task at hand by masking sudden, distracting sounds in the environment.\n\nA 2017 study published in the journal Scientific Reports found that participants who listened to white noise while performing a memory task showed increased activity in brain regions associated with attention and cognitive control. Another study in the Journal of Cognitive Neuroscience demonstrated that white noise improved memory performance in children with ADHD.\n\nHowever, white noise is not universally beneficial. Some research suggests that for certain individuals, particularly those with normal attention levels, white noise can be distracting or even slightly impair performance. The key seems to be individual differences in baseline dopamine levels and sensory processing.\n\nBeyond traditional white noise, other ambient sounds like pink noise, brown noise, rain, ocean waves, and forest sounds have gained popularity through apps and streaming services. Each has a different frequency profile and may work differently for different people. The growing body of research suggests that personalized sound environments may become a standard tool for optimizing workspaces and learning environments.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "What phenomenon explains why white noise can help with focus?",
+        "options": ["Acoustic shadowing", "Stochastic resonance", "Frequency modulation", "Doppler effect"],
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "text": "According to the article, white noise is universally beneficial for everyone.",
+        "options": ["True", "False"],
+        "answer": 1
+      },
+      {
+        "id": 3,
+        "text": "Besides white noise, what other ambient sounds are mentioned?",
+        "options": ["Jazz and classical music", "Pink noise, brown noise, rain, and ocean waves", "Silence and meditation chants", "Podcasts and audiobooks"],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "The Pomodoro Technique",
+    "description": "A simple yet powerful time-management method that uses timed intervals to boost reading comprehension and focus.",
+    "difficulty": 1,
+    "image": "/covers/cover_4.png",
+    "gradient": "linear-gradient(135deg, #b83227, #d4483c, #e87060)",
+    "content": "The Pomodoro Technique was developed in the late 1980s by Francesco Cirillo, a university student who struggled with procrastination. He challenged himself to study for just ten minutes using a tomato-shaped kitchen timer — 'pomodoro' is Italian for tomato — and discovered that short, focused bursts were far more effective than trying to study for hours.\n\nThe core method is elegantly simple. Choose a task, set a timer for twenty-five minutes, and work on that task with complete focus until the timer rings. Then take a short break — typically five minutes. After completing four pomodoros, take a longer break of fifteen to thirty minutes.\n\nWhen applied to reading, the Pomodoro Technique can dramatically improve comprehension and retention. Instead of passively scanning pages while your mind wanders, you engage with the text actively for a defined period. Many readers find that knowing the session will end soon makes it easier to sustain attention throughout.\n\nThe technique also reduces decision fatigue. When you sit down to read, you are not faced with the vague and daunting goal of 'finish this chapter.' Instead, you simply commit to one pomodoro of focused reading. This lower barrier to entry makes it much easier to begin — and beginning is often the hardest part.\n\nDigital tools have since replaced the original tomato timer, with apps like Focus Keeper, Forest, and countless others baking in the Pomodoro method. But the principle remains unchanged: short, timed sessions of undistracted focus, followed by deliberate rest, produce better results than marathon sessions of half-hearted effort.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "What does 'pomodoro' mean in Italian?",
+        "options": ["Focus", "Timer", "Tomato", "Work"],
+        "answer": 2
+      },
+      {
+        "id": 2,
+        "text": "How long is the recommended long break after four pomodoros?",
+        "options": ["5 to 10 minutes", "10 to 15 minutes", "15 to 30 minutes", "30 to 45 minutes"],
+        "answer": 2
+      },
+      {
+        "id": 3,
+        "text": "According to the article, what is often the hardest part of reading?",
+        "options": ["Understanding complex vocabulary", "Remembering what you read", "Beginning", "Finishing the chapter"],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Climate Change and Global Food Security",
+    "description": "How rising temperatures and extreme weather are reshaping agriculture and what innovations might help feed the future.",
+    "difficulty": 5,
+    "image": "/covers/cover_5.png",
+    "gradient": "linear-gradient(135deg, #1a4a1f, #2d6b33, #4a9452)",
+    "content": "Climate change poses one of the most significant threats to global food security in human history. According to the Intergovernmental Panel on Climate Change, global temperatures have already risen approximately 1.1 degrees Celsius above pre-industrial levels, and the effects on agriculture are becoming impossible to ignore.\n\nRising temperatures directly reduce crop yields. A 2021 study in Nature Food estimated that for each degree Celsius of warming, global wheat yields decline by about 6 percent, rice by 3.2 percent, and maize by 7.4 percent. In tropical regions, where many developing nations depend heavily on subsistence agriculture, the impacts are projected to be even more severe.\n\nBeyond temperature, the increased frequency of extreme weather events — droughts, floods, heatwaves, and unseasonable frosts — disrupts planting and harvest cycles. Farmers who once relied on predictable seasonal patterns now face unprecedented uncertainty. In 2022, catastrophic floods in Pakistan submerged one-third of the country's farmland, while simultaneous drought in the Horn of Africa pushed millions to the brink of famine.\n\nYet there are reasons for cautious optimism. Advances in crop genetics, including CRISPR gene editing, are producing drought-resistant and heat-tolerant varieties. Vertical farming and precision agriculture promise to produce more food with less land and water. Regenerative farming practices that rebuild soil health can sequester carbon while improving yields.\n\nThe challenge is as much political and economic as it is technological. Ensuring food security in a warming world will require international cooperation, significant investment in agricultural research, and policies that support farmers through the transition. The question is not whether we have the tools to adapt, but whether we have the collective will to deploy them at scale.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "According to the study in Nature Food, how much do global wheat yields decline per degree Celsius of warming?",
+        "options": ["About 3.2%", "About 6%", "About 7.4%", "About 10%"],
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "text": "What technology is mentioned for developing drought-resistant crops?",
+        "options": ["Artificial intelligence", "CRISPR gene editing", "Nuclear radiation", "Cross-pollination"],
+        "answer": 1
+      },
+      {
+        "id": 3,
+        "text": "What does the author identify as the fundamental question about food security?",
+        "options": ["Whether we have the tools to adapt", "Whether we have the collective will to deploy tools at scale", "Whether climate change is real", "Whether vertical farming is profitable"],
+        "answer": 1
+      }
+    ]
+  }
+]
