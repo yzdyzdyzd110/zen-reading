@@ -3,12 +3,15 @@ import articles from '../data/articles.json';
 
 const router = Router();
 
-router.get('/', (_req: Request, res: Response) => {
-  const summaries = articles.map(({ id, title, description, difficulty, image, gradient }) => ({
+router.get('/', (req: Request, res: Response) => {
+  const lang = req.query.lang as string | undefined;
+  const filtered = lang ? articles.filter((a) => (a as any).language === lang) : articles;
+  const summaries = filtered.map(({ id, title, description, difficulty, language, image, gradient }) => ({
     id,
     title,
     description,
     difficulty,
+    language,
     image,
     gradient,
   }));

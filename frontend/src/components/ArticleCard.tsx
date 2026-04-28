@@ -2,14 +2,29 @@ import { useNavigate } from 'react-router-dom';
 import StarRating from './StarRating';
 import type { ArticleSummary } from '../types';
 
+const DIFF_LABELS: Record<string, (d: number) => string> = {
+  en: (d) => (d <= 2 ? 'Beginner' : d <= 3 ? 'Intermediate' : 'Advanced'),
+  ja: (d) => (d <= 2 ? 'N3' : d <= 3 ? 'N2' : 'N1'),
+};
+
+const ENTER_LABELS: Record<string, string> = {
+  en: 'Start Reading →',
+  ja: '読む →',
+};
+
 export default function ArticleCard({ article }: { article: ArticleSummary }) {
   const navigate = useNavigate();
+  const lang = article.language || 'en';
+  const diffLabel = (DIFF_LABELS[lang] || DIFF_LABELS.en)(article.difficulty);
+  const enterLabel = ENTER_LABELS[lang] || ENTER_LABELS.en;
 
   return (
     <div
       className="article-card"
       style={{
-        backgroundImage: `url(${article.image}), ${article.gradient}`,
+        backgroundImage: article.image
+          ? `url(${article.image}), ${article.gradient}`
+          : article.gradient,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -22,10 +37,8 @@ export default function ArticleCard({ article }: { article: ArticleSummary }) {
         </div>
         <p className="article-card-desc">{article.description}</p>
         <div className="article-card-footer">
-          <span className="difficulty-label">
-            {article.difficulty <= 2 ? 'Beginner' : article.difficulty <= 3 ? 'Intermediate' : 'Advanced'}
-          </span>
-          <span className="enter-btn">Start Reading →</span>
+          <span className="difficulty-label">{diffLabel}</span>
+          <span className="enter-btn">{enterLabel}</span>
         </div>
       </div>
     </div>

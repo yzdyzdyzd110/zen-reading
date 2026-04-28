@@ -27,7 +27,9 @@ export default function ReadPage() {
       <div
         className="read-hero"
         style={{
-          backgroundImage: `url(${article.image}), ${article.gradient}`,
+          backgroundImage: article.image
+            ? `url(${article.image}), ${article.gradient}`
+            : article.gradient,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
