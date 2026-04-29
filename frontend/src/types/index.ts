@@ -20,6 +20,15 @@ export interface Article extends ArticleSummary {
   questions: Question[];
 }
 
+export interface ArticleSetSummary {
+  id: number;
+  title: string;
+  description: string;
+  language: string;
+  gradient: string;
+  articleCount: number;
+}
+
 export interface VocabWord {
   id: number;
   word: string;
@@ -27,15 +36,27 @@ export interface VocabWord {
   meaning: string;
 }
 
-export interface VocabListSummary {
+export interface VocabSetSummary {
   id: number;
   title: string;
   description: string;
   language: string;
   gradient: string;
-  wordCount?: number;
+  listCount: number;
+  totalWords: number;
 }
 
-export interface VocabList extends VocabListSummary {
+export interface VocabSet extends VocabSetSummary {
+  lists: { id: number; title: string; wordCount: number }[];
+}
+
+export interface VocabList {
+  id: number;
+  title: string;
+  setId: number;
+  setTitle: string;
+  language: string;
+  gradient: string;
+  wordCount: number;
   words: VocabWord[];
 }
