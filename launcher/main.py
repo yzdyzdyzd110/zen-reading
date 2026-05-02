@@ -1,45 +1,20 @@
 """
 ZenReading Launcher — cross-platform GUI (PyQt6)
-Manages the Express backend server lifecycle.
+Manages the Node.js Express backend server lifecycle.
 """
 import sys
 import os
-import subprocess
 import webbrowser
-import signal
+import urllib.request
+import shutil
 
 from PyQt6.QtWidgets import (
-    QApplication, QWidget, QVBoxLayout, QHBoxLayout,
-    QPushButton, QLabel, QFrame, QSpacerItem, QSizePolicy,
+    QApplication, QWidget, QVBoxLayout,
+    QPushButton, QLabel,
 )
-from PyQt6.QtCore import Qt, QTimer, QProcess, pyqtSignal
-from PyQt6.QtGui import QFont, QColor, QPalette, QIcon
+from PyQt6.QtCore import Qt, QTimer, QProcess
 
 APP_PORT = 3001
-
-
-class ServerManager(QProcess):
-    status_changed = pyqtSignal(bool)
-
-    def __init__(self, work_dir):
-        super().__init__()
-        self.work_dir = work_dir
-        self.finished.connect(lambda: self.status_changed.emit(False))
-
-    def start_server(self):
-        if self.state() == QProcess.ProcessState.Running:
-            return
-        self.setWorkingDirectory(self.work_dir)
-        self.start("node", ["server.js"])
-        self.status_changed.emit(True)
-
-    def stop_server(self):
-        if self.state() != QProcess.ProcessState.Running:
-            return
-        self.terminate()
-        if not self.waitForFinished(3000):
-            self.kill()
-        self.status_changed.emit(False)
 
 
 class LauncherWindow(QWidget):
@@ -62,7 +37,6 @@ class LauncherWindow(QWidget):
         layout.setContentsMargins(44, 40, 44, 36)
         layout.setSpacing(0)
 
-        # Title
         title = QLabel("ZenReading")
         title.setObjectName("title")
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -75,7 +49,6 @@ class LauncherWindow(QWidget):
 
         layout.addStretch(2)
 
-        # Start button
         self.btn_start = QPushButton("Start Server")
         self.btn_start.setObjectName("btnStart")
         self.btn_start.setFixedHeight(48)
@@ -85,7 +58,6 @@ class LauncherWindow(QWidget):
 
         layout.addSpacing(12)
 
-        # Stop button
         self.btn_stop = QPushButton("Stop Server")
         self.btn_stop.setObjectName("btnStop")
         self.btn_stop.setFixedHeight(44)
@@ -96,7 +68,6 @@ class LauncherWindow(QWidget):
 
         layout.addSpacing(12)
 
-        # Open button
         self.btn_open = QPushButton("Open App")
         self.btn_open.setObjectName("btnOpen")
         self.btn_open.setFixedHeight(44)
@@ -107,13 +78,11 @@ class LauncherWindow(QWidget):
 
         layout.addStretch(1)
 
-        # Status
-        self.lbl_status = QLabel("●  Server stopped")
+        self.lbl_status = QLabel("  Server stopped")
         self.lbl_status.setObjectName("statusOff")
         self.lbl_status.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.lbl_status)
 
-        # Exit link
         exit_label = QLabel("Exit")
         exit_label.setObjectName("exitLink")
         exit_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -123,20 +92,26 @@ class LauncherWindow(QWidget):
         self.setLayout(layout)
 
     def _init_server(self):
-        # When packaged: use the directory containing the .exe
-        # In dev mode: go up from launcher/ to project root
+        # Work dir is where the launcher exe lives (same dir as server.js)
         if getattr(sys, 'frozen', False):
             work_dir = os.path.dirname(sys.executable)
         else:
             work_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.server = ServerManager(work_dir)
-        self.server.status_changed.connect(self._on_status)
 
-        # Check Node.js availability
-        import shutil
-        if not shutil.which('node'):
-            self.lbl_status.setText("Node.js not found — please install Node.js")
-            self.lbl_status.setObjectName("statusOff")
+        self._work_dir = work_dir
+
+        # Use bundled Node.js runtime, fallback to system
+        if sys.platform == 'win32':
+            bundled = os.path.join(work_dir, 'node_runtime', 'node.exe')
+        else:
+            bundled = os.path.join(work_dir, 'node_runtime', 'node')
+        if os.path.exists(bundled):
+            self._node_exe = bundled
+        elif shutil.which('node'):
+            self._node_exe = 'node'
+        else:
+            self._node_exe = None
+            self.lbl_status.setText("  Node.js not found")
             self.btn_start.setEnabled(False)
             self.btn_start.setText("Node.js required")
             self._refresh_style()
@@ -147,34 +122,49 @@ class LauncherWindow(QWidget):
         self._timer.start(3000)
 
     def _poll(self):
-        """Check if server is actually responding."""
         if not self.running:
             return
-        import urllib.request
         try:
             urllib.request.urlopen(f"http://localhost:{APP_PORT}/api/articles/sets", timeout=2)
         except Exception:
-            pass  # Don't flip state based on this — use QProcess signal
+            pass
 
     def _on_start(self):
-        self.server.start_server()
+        if self.server and self.server.state() == QProcess.ProcessState.Running:
+            return
+        self.server = QProcess()
+        self.server.finished.connect(lambda: self._on_process_done())
+        self.server.setWorkingDirectory(self._work_dir)
+        self.server.start(self._node_exe, ["server.js"])
+        self._set_running(True)
 
     def _on_stop(self):
-        self.server.stop_server()
+        try:
+            urllib.request.urlopen(f"http://localhost:{APP_PORT}/api/shutdown", timeout=1)
+        except Exception:
+            pass
+        if self.server and self.server.state() == QProcess.ProcessState.Running:
+            self.server.terminate()
+            if not self.server.waitForFinished(3000):
+                self.server.kill()
+        self._set_running(False)
 
-    def _on_status(self, running: bool):
+    def _on_process_done(self):
+        self._set_running(False)
+
+    def _set_running(self, running: bool):
         self.running = running
         if running:
             self.btn_start.setEnabled(False)
             self.btn_stop.setEnabled(True)
             self.btn_open.setEnabled(True)
-            self.lbl_status.setText("●  Server running")
+            self.lbl_status.setText("  Server running")
             self.lbl_status.setObjectName("statusOn")
         else:
             self.btn_start.setEnabled(True)
             self.btn_stop.setEnabled(False)
             self.btn_open.setEnabled(False)
-            self.lbl_status.setText("●  Server stopped")
+            self.lbl_status.setText("  Server stopped")
             self.lbl_status.setObjectName("statusOff")
         self._refresh_style()
 
@@ -182,8 +172,8 @@ class LauncherWindow(QWidget):
         self.setStyleSheet(self._style())
 
     def closeEvent(self, event):
-        if self.server and self.server.state() == QProcess.ProcessState.Running:
-            self.server.stop_server()
+        if self.running:
+            self._on_stop()
         event.accept()
 
     def _style(self):
@@ -193,58 +183,32 @@ class LauncherWindow(QWidget):
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
         QLabel#title {
-            font-size: 26px;
-            font-weight: 700;
-            color: #7a9a7d;
-            letter-spacing: 2px;
-            margin-bottom: 2px;
+            font-size: 26px; font-weight: 700; color: #7a9a7d;
+            letter-spacing: 2px; margin-bottom: 2px;
         }
         QLabel#subtitle {
-            font-size: 13px;
-            color: #9e9688;
-            margin-bottom: 4px;
+            font-size: 13px; color: #9e9688; margin-bottom: 4px;
         }
         QPushButton {
-            border: none;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 600;
+            border: none; border-radius: 10px;
+            font-size: 14px; font-weight: 600;
         }
-        QPushButton#btnStart {
-            background: #7a9a7d;
-            color: #fff;
-        }
+        QPushButton#btnStart { background: #7a9a7d; color: #fff; }
         QPushButton#btnStart:hover { background: #5a7a5d; }
         QPushButton#btnStart:disabled { background: #e8e4dc; color: #9e9688; }
         QPushButton#btnStop {
-            background: transparent;
-            color: #e57373;
-            border: 1.5px solid #e8e4dc;
+            background: transparent; color: #e57373; border: 1.5px solid #e8e4dc;
         }
         QPushButton#btnStop:hover { background: #fbe9e7; }
         QPushButton#btnStop:disabled { border-color: #e8e4dc; color: #ccc; }
         QPushButton#btnOpen {
-            background: transparent;
-            color: #7a9a7d;
-            border: 1.5px solid #7a9a7d;
+            background: transparent; color: #7a9a7d; border: 1.5px solid #7a9a7d;
         }
         QPushButton#btnOpen:hover { background: #ecf2ec; }
         QPushButton#btnOpen:disabled { border-color: #e8e4dc; color: #ccc; }
-        QLabel#statusOn {
-            font-size: 11px;
-            color: #4caf50;
-            padding-top: 4px;
-        }
-        QLabel#statusOff {
-            font-size: 11px;
-            color: #9e9688;
-            padding-top: 4px;
-        }
-        QLabel#exitLink {
-            font-size: 11px;
-            color: #ccc;
-            padding-top: 4px;
-        }
+        QLabel#statusOn { font-size: 11px; color: #4caf50; padding-top: 4px; }
+        QLabel#statusOff { font-size: 11px; color: #9e9688; padding-top: 4px; }
+        QLabel#exitLink { font-size: 11px; color: #ccc; padding-top: 4px; }
         QLabel#exitLink:hover { color: #9e9688; }
         """
 
