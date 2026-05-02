@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import type { VocabListSummary } from '../types';
+import type { VocabSetSummary } from '../types';
 
-export default function VocabListCard({ list }: { list: VocabListSummary }) {
+export default function VocabListCard({ list }: { list: VocabSetSummary }) {
   const navigate = useNavigate();
 
   return (
@@ -14,8 +14,8 @@ export default function VocabListCard({ list }: { list: VocabListSummary }) {
         <h3>{list.title}</h3>
         <p>{list.description}</p>
         <div className="vocab-card-footer">
-          <span className="vocab-count">{list.wordCount} words</span>
-          <span className="enter-btn">学習開始 →</span>
+          <span className="vocab-count">{list.listCount} リスト · {list.totalWords}語</span>
+          <span className="enter-btn">選択 →</span>
         </div>
       </div>
     </div>
