@@ -8,6 +8,8 @@ on:
 jobs:
   build-windows:
     runs-on: windows-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -25,7 +27,7 @@ jobs:
         run: cd frontend && npm run build
 
       - name: Package Windows
-        run: npx electron-builder --win portable
+        run: npx electron-builder --win portable --publish=never
 
       - uses: actions/upload-artifact@v4
         with:
@@ -34,6 +36,8 @@ jobs:
 
   build-mac:
     runs-on: macos-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -51,7 +55,7 @@ jobs:
         run: cd frontend && npm run build
 
       - name: Package Mac
-        run: npx electron-builder --mac
+        run: npx electron-builder --mac --publish=never
 
       - uses: actions/upload-artifact@v4
         with:
