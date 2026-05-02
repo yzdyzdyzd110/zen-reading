@@ -8,14 +8,16 @@ on:
 jobs:
   build-windows:
     runs-on: windows-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Install root dependencies
         run: npm install
@@ -26,24 +28,29 @@ jobs:
       - name: Build frontend
         run: cd frontend && npm run build
 
-      - name: Package Windows
-        run: npx electron-builder --win portable --publish=never
+      - name: Install PyQt6 and PyInstaller
+        run: pip install PyQt6 pyinstaller
+
+      - name: Package Launcher
+        run: python launcher/build.py
 
       - uses: actions/upload-artifact@v4
         with:
           name: ZenReading-Windows
-          path: release/ZenReading-*.exe
+          path: release/ZenReading.exe
 
   build-mac:
     runs-on: macos-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Install root dependencies
         run: npm install
@@ -54,18 +61,13 @@ jobs:
       - name: Build frontend
         run: cd frontend && npm run build
 
-      - name: Package Mac (x64)
-        run: npx electron-builder --mac --x64 --publish=never
+      - name: Install PyQt6 and PyInstaller
+        run: pip install PyQt6 pyinstaller
 
-      - name: Package Mac (arm64)
-        run: npx electron-builder --mac --arm64 --publish=never
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ZenReading-Mac-x64
-          path: release/ZenReading-*x64*.dmg
+      - name: Package Launcher
+        run: python launcher/build.py
 
       - uses: actions/upload-artifact@v4
         with:
-          name: ZenReading-Mac-arm64
-          path: release/ZenReading-*arm64*.dmg
+          name: ZenReading-Mac
+          path: release/ZenReading.app

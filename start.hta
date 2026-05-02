@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ZenReading</title>
+<style>
+  body { margin:0; padding:0; background:#f9f6f0; font-family:'Segoe UI',system-ui,sans-serif; }
+  .win { width:320px; margin:30px auto; text-align:center; }
+  h1 { color:#7a9a7d; font-size:22px; margin-bottom:4px; letter-spacing:1px; }
+  .sub { color:#9e9688; font-size:12px; margin-bottom:36px; }
+  .btn-start { display:block; width:260px; height:40px; margin:0 auto 10px;
+    background:#7a9a7d; color:#fff; border:none; border-radius:8px;
+    font-size:14px; font-weight:bold; cursor:pointer; }
+  .btn-start:hover { background:#5a7a5d; }
+  .btn-exit { display:block; width:260px; height:34px; margin:0 auto;
+    background:transparent; color:#9e9688; border:1.5px solid #d8d4cc; border-radius:8px;
+    font-size:13px; cursor:pointer; }
+  .btn-exit:hover { background:#f0ede8; }
+  .status { color:#9e9688; font-size:11px; margin-top:16px; min-height:16px; }
+</style>
+<script language="VBScript">
+  Sub StartServer
+    Set shell = CreateObject("WScript.Shell")
+    scriptDir = Replace(document.URL, "file:///", "")
+    scriptDir = Left(scriptDir, InStrRev(scriptDir, "/"))
+    scriptDir = Replace(scriptDir, "/", "\")
+    If Right(scriptDir, 1) = "\" Then scriptDir = Left(scriptDir, Len(scriptDir) - 1)
+
+    statusDiv.innerText = "Starting server..."
+    shell.Run "cmd /c cd /d """ & scriptDir & """ && node server.js", 1, False
+    window.close()
+  End Sub
+
+  Sub ExitApp
+    window.close()
+  End Sub
+</script>
+</head>
+<body>
+<div class="win">
+  <h1>ZenReading</h1>
+  <p class="sub">禅定阅读 · 沉浸式学习</p>
+  <button class="btn-start" onclick="StartServer">Start Server</button>
+  <button class="btn-exit" onclick="ExitApp">Exit</button>
+  <p id="statusDiv" class="status"></p>
+</div>
+</body>
+</html>

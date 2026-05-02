@@ -2,44 +2,13 @@
   "name": "zenreading",
   "version": "1.0.0",
   "description": "ZenReading - 禅定阅读",
-  "main": "electron/main.js",
   "scripts": {
     "build:frontend": "cd frontend && npm install && npm run build",
     "build": "npm run build:frontend",
-    "pack:win": "npm run build && electron-builder --win portable",
-    "pack:mac": "npm run build && electron-builder --mac",
-    "pack:all": "npm run build && electron-builder --win --mac"
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.0"
-  },
-  "devDependencies": {
-    "electron": "^33.0.0",
-    "electron-builder": "^25.0.0"
-  },
-  "build": {
-    "appId": "com.zenreading.app",
-    "productName": "ZenReading",
-    "directories": {
-      "output": "release"
-    },
-    "files": [
-      "electron/**/*",
-      "frontend/dist/**/*",
-      "backend/src/data/**/*",
-      "node_modules/**/*"
-    ],
-    "mac": {
-      "category": "public.app-category.education",
-      "target": ["dmg", "zip"]
-    },
-    "win": {
-      "target": ["portable"]
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
-    }
   }
 }
