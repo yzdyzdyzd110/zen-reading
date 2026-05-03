@@ -23,7 +23,11 @@ export default function ReadPage() {
 
   useEffect(() => {
     if (!article) return;
-    fetch(`/api/articles?lang=${article.language}`)
+    const a = article as any;
+    const query = a.language === 'ja' && a.type
+      ? `?type=${a.type}`
+      : `?lang=${article.language}`;
+    fetch(`/api/articles${query}`)
       .then((res) => res.json())
       .then(setArticles)
       .catch(() => {});

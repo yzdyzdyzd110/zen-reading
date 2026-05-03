@@ -4,6 +4,7 @@ export interface ArticleSummary {
   description: string;
   difficulty: number;
   language: string;
+  type?: string;
   image: string;
   gradient: string;
 }

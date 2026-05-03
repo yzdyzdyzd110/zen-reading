@@ -5,6 +5,7 @@
     "description": "Explore the enduring legend of a sunken civilization and what modern science has uncovered.",
     "difficulty": 2,
     "language": "en",
+    "type": "reading",
     "image": "/covers/cover_1.png",
     "gradient": "linear-gradient(135deg, #0a2a5e, #14538a, #2b8ab5)",
     "content": "For more than two thousand years, the story of Atlantis has captivated the human imagination. First described by the Greek philosopher Plato around 360 BCE, Atlantis was said to be a powerful and advanced kingdom that sank into the sea in a single day and night of misfortune.\n\nPlato described Atlantis as a land of great wealth and natural beauty. Its capital city was built on a hill and surrounded by rings of water and land, connected by bridges and tunnels. The Atlanteans were said to be skilled engineers who built complex canals, temples, and harbors.\n\nAccording to the legend, the Atlanteans became greedy and corrupt over time. As punishment for their moral decay, the gods sent earthquakes and floods that destroyed the civilization and submerged it beneath the Atlantic Ocean.\n\nModern researchers have proposed numerous locations for the lost city, including the Mediterranean island of Santorini, which was devastated by a volcanic eruption around 1600 BCE. Others suggest locations near the Bahamas, Cuba, or even Antarctica. Despite extensive searches using sonar and underwater archaeology, no conclusive evidence of Atlantis has ever been found.\n\nMany scholars believe Plato created the story as an allegory about the dangers of hubris and the ideal state. Whether myth or memory of a real catastrophe, Atlantis continues to inspire books, films, and expeditions to this day.",
@@ -35,6 +36,7 @@
     "description": "How mindfulness and single-tasking can transform your productivity in an age of constant distraction.",
     "difficulty": 3,
     "language": "en",
+    "type": "reading",
     "image": "/covers/cover_2.png",
     "gradient": "linear-gradient(135deg, #6b3a2a, #a0523c, #d4946a)",
     "content": "In an era defined by notifications, endless scrolling, and the constant ping of messages, the ability to focus deeply on a single task has become a rare and valuable skill. Research suggests that the average office worker is interrupted every eleven minutes, and it can take over twenty minutes to regain the same level of concentration.\n\nCal Newport, author of the influential book Deep Work, argues that the ability to focus without distraction on a cognitively demanding task is becoming increasingly rare at the same time it is becoming increasingly valuable in our economy. Those who can master deep focus will thrive.\n\nThe first step toward deep focus is creating the right environment. This means silencing your phone, closing unnecessary browser tabs, and finding a quiet space. Some practitioners use noise-cancelling headphones with white noise or nature sounds to block out ambient distractions.\n\nEqually important is training your attention span like a muscle. Start with short bursts — perhaps twenty-five minutes of uninterrupted work followed by a five-minute break, a technique known as the Pomodoro Method. Gradually extend these sessions as your concentration improves.\n\nFinally, embrace boredom. In a world where we habitually reach for our phones during any idle moment, learning to sit still with your thoughts is a form of mental training. Allow your mind to wander without digital input, and you may find your best ideas emerging from the silence.",
@@ -65,6 +67,7 @@
     "description": "Understanding how ambient sound affects concentration, memory, and cognitive performance.",
     "difficulty": 4,
     "language": "en",
+    "type": "reading",
     "image": "/covers/cover_3.png",
     "gradient": "linear-gradient(135deg, #2d2d5e, #484882, #6e6eaa)",
     "content": "White noise — a consistent sound that contains all frequencies across the audible spectrum at equal intensity — has been studied extensively for its effects on concentration, sleep, and cognitive performance. Its name derives from white light, which contains all colors of light combined.\n\nThe mechanism behind white noise's effectiveness lies in a phenomenon called stochastic resonance. When a steady background noise is present, the brain's auditory system becomes more sensitive to detecting signals above that noise floor. This can paradoxically make it easier to focus on the task at hand by masking sudden, distracting sounds in the environment.\n\nA 2017 study published in the journal Scientific Reports found that participants who listened to white noise while performing a memory task showed increased activity in brain regions associated with attention and cognitive control. Another study in the Journal of Cognitive Neuroscience demonstrated that white noise improved memory performance in children with ADHD.\n\nHowever, white noise is not universally beneficial. Some research suggests that for certain individuals, particularly those with normal attention levels, white noise can be distracting or even slightly impair performance. The key seems to be individual differences in baseline dopamine levels and sensory processing.\n\nBeyond traditional white noise, other ambient sounds like pink noise, brown noise, rain, ocean waves, and forest sounds have gained popularity through apps and streaming services. Each has a different frequency profile and may work differently for different people. The growing body of research suggests that personalized sound environments may become a standard tool for optimizing workspaces and learning environments.",
@@ -95,6 +98,7 @@
     "description": "A simple yet powerful time-management method that uses timed intervals to boost reading comprehension and focus.",
     "difficulty": 1,
     "language": "en",
+    "type": "reading",
     "image": "/covers/cover_4.png",
     "gradient": "linear-gradient(135deg, #b83227, #d4483c, #e87060)",
     "content": "The Pomodoro Technique was developed in the late 1980s by Francesco Cirillo, a university student who struggled with procrastination. He challenged himself to study for just ten minutes using a tomato-shaped kitchen timer — 'pomodoro' is Italian for tomato — and discovered that short, focused bursts were far more effective than trying to study for hours.\n\nThe core method is elegantly simple. Choose a task, set a timer for twenty-five minutes, and work on that task with complete focus until the timer rings. Then take a short break — typically five minutes. After completing four pomodoros, take a longer break of fifteen to thirty minutes.\n\nWhen applied to reading, the Pomodoro Technique can dramatically improve comprehension and retention. Instead of passively scanning pages while your mind wanders, you engage with the text actively for a defined period. Many readers find that knowing the session will end soon makes it easier to sustain attention throughout.\n\nThe technique also reduces decision fatigue. When you sit down to read, you are not faced with the vague and daunting goal of 'finish this chapter.' Instead, you simply commit to one pomodoro of focused reading. This lower barrier to entry makes it much easier to begin — and beginning is often the hardest part.\n\nDigital tools have since replaced the original tomato timer, with apps like Focus Keeper, Forest, and countless others baking in the Pomodoro method. But the principle remains unchanged: short, timed sessions of undistracted focus, followed by deliberate rest, produce better results than marathon sessions of half-hearted effort.",
@@ -125,6 +129,7 @@
     "description": "How rising temperatures and extreme weather are reshaping agriculture and what innovations might help feed the future.",
     "difficulty": 5,
     "language": "en",
+    "type": "reading",
     "image": "/covers/cover_5.png",
     "gradient": "linear-gradient(135deg, #1a4a1f, #2d6b33, #4a9452)",
     "content": "Climate change poses one of the most significant threats to global food security in human history. According to the Intergovernmental Panel on Climate Change, global temperatures have already risen approximately 1.1 degrees Celsius above pre-industrial levels, and the effects on agriculture are becoming impossible to ignore.\n\nRising temperatures directly reduce crop yields. A 2021 study in Nature Food estimated that for each degree Celsius of warming, global wheat yields decline by about 6 percent, rice by 3.2 percent, and maize by 7.4 percent. In tropical regions, where many developing nations depend heavily on subsistence agriculture, the impacts are projected to be even more severe.\n\nBeyond temperature, the increased frequency of extreme weather events — droughts, floods, heatwaves, and unseasonable frosts — disrupts planting and harvest cycles. Farmers who once relied on predictable seasonal patterns now face unprecedented uncertainty. In 2022, catastrophic floods in Pakistan submerged one-third of the country's farmland, while simultaneous drought in the Horn of Africa pushed millions to the brink of famine.\n\nYet there are reasons for cautious optimism. Advances in crop genetics, including CRISPR gene editing, are producing drought-resistant and heat-tolerant varieties. Vertical farming and precision agriculture promise to produce more food with less land and water. Regenerative farming practices that rebuild soil health can sequester carbon while improving yields.\n\nThe challenge is as much political and economic as it is technological. Ensuring food security in a warming world will require international cooperation, significant investment in agricultural research, and policies that support farmers through the transition. The question is not whether we have the tools to adapt, but whether we have the collective will to deploy them at scale.",
@@ -155,6 +160,7 @@
     "description": "急速に進む日本の人口構造の変化と、それに伴う社会制度の変革について考察する。",
     "difficulty": 4,
     "language": "ja",
+    "type": "argument",
     "image": "",
     "gradient": "linear-gradient(135deg, #8b4557, #b5656d, #d4958a)",
     "content": "日本の少子高齢化は、世界でも類を見ない速度で進行している。総務省の統計によれば、65歳以上の高齢者人口は総人口の29%を超え、年間出生数は80万人を割り込んだ。この人口構造の変化は、単に統計上の数字の問題ではなく、社会の根幹を揺るがす構造的な課題である。\n\n第一に、社会保障制度の持続可能性が深刻な問題となっている。現役世代が減少する一方で年金受給者は増加の一途をたどっており、いわゆる「世代間格差」が拡大している。医療費も高齢者を中心に増加を続け、健康保険組合の財政を圧迫している。制度改革なしには、現在の生活水準を維持することは困難であるとの試算が複数の研究機関から発表されている。\n\n第二に、労働力不足が経済成長の足枷となっている。生産年齢人口の減少に伴い、建設業や介護、運輸などの分野ではすでに深刻な人手不足が顕在化している。政府は女性や高齢者の就労促進、外国人労働者の受け入れ拡大などの対策を講じているが、抜本的な解決には至っていない。\n\nしかし、この危機を単なる悲観論で終わらせるべきではない。人口減少は、見方を変えれば、過密状態の緩和や一人当たりの資源配分の増加といった機会をもたらす。AI・ロボット技術の活用による生産性の向上や、地方移住による新たなコミュニティ形成など、社会システムを根本から再設計する好機と捉えることもできる。\n\n重要なのは、問題の先送りをやめ、世代を超えた建設的な対話を通じて、持続可能な社会モデルを構築していくことである。",
@@ -200,6 +206,7 @@
     "description": "AIの発展が人間の創造的活動に与える影響と、これからの時代に求められる思考力について論じる。",
     "difficulty": 5,
     "language": "ja",
+    "type": "long",
     "image": "",
     "gradient": "linear-gradient(135deg, #2c3e6b, #4a5d8f, #7285b5)",
     "content": "生成AIの急速な進歩は、人間の創造性という概念そのものに根本的な問いを投げかけている。文章作成、画像生成、音楽制作、プログラミング——かつては人間の独創性の象徴とされてきた領域に、機械が容易に参入できるようになった。この変化を脅威と見るか、可能性と見るかは、テクノロジーと人間の関係をどう捉えるかにかかっている。\n\n歴史を顧みれば、「機械が人間の能力を凌駕する」という恐怖は繰り返し現れてきた。写真の発明は肖像画家の仕事を奪ったが、同時に印象派という新たな芸術表現を生み出す契機ともなった。電卓の普及は暗算能力の重要性を低下させたが、より高次の数学的思考を可能にした。技術革新は常に、特定のスキルを陳腐化させる一方で、新たな創造的領域を切り開いてきたのである。\n\nAIの時代において、真に価値を持つのは「問いを立てる力」であると筆者は考える。AIは与えられた問題に対して驚くほど精度の高い解答を生成できるが、「何を問うべきか」を自ら発見することはできない。優れた問いとは、既存の枠組みを超え、新たな視点から世界を捉え直す営みから生まれる。\n\nまた、人間にしかできない領域として、「意味づけ」の重要性も指摘しておきたい。データの分析やパターンの抽出はAIが得意とするが、そこから何を感じ取り、どう行動すべきかを判断するのは、最終的には人間の価値観と倫理観に委ねられている。\n\n結局のところ、AIは人間の創造性を代替するものではなく、拡張するパートナーとして捉えるべきであろう。重要なのは、技術に振り回されることなく、人間ならではの感性と批判的思考を磨き続けることである。",
@@ -245,6 +252,7 @@
     "description": "日本文化に根付く「もったいない」という概念が持つ現代的意義と、持続可能な社会への示唆を読み解く。",
     "difficulty": 3,
     "language": "ja",
+    "type": "medium",
     "image": "",
     "gradient": "linear-gradient(135deg, #5c4a3a, #7d6b52, #a89878)",
     "content": "「もったいない」——この一言に込められた日本独自の価値観は、単なる節約の美徳を超えて、物の本質的な価値を見極める深い哲学を内包している。ノーベル平和賞を受賞したワンガリ・マータイ氏がこの言葉に感銘を受け、環境保護の合言葉として世界に広めたことはよく知られている。\n\n語源を辿れば、「もったい」は「物体（もったい）」すなわち「物の本体・本質」を意味し、「ない」はその本質が活かされていない状態を指す。つまり「もったいない」とは、物が持つ本来の価値が十分に発揮されていないことへの哀惜の念なのである。\n\nこの考え方は、ものを最後まで使い切るだけでなく、作り手の思いや時間、自然の恵みにまで思いを巡らせる態度を育んできた。一碗の味噌汁の向こうに大豆を育てた農家の苦労を感じ、使い古した着物を雑巾に仕立て直すことで布の命を全うさせる——そうした日常の営みの積み重ねが、日本の持続可能な生活文化を形作ってきた。\n\n現代社会において、「もったいない」の精神は新たな意味を帯びている。大量生産・大量消費・大量廃棄のグローバル経済は、地球の資源を加速度的に消耗している。その中で、ものを大切にする日本の伝統的な価値観は、サーキュラーエコノミー（循環経済）やSDGsの理念と深く共鳴するものとして、国際的にも再評価されつつある。\n\nただし、「もったいない」を単なる過去の遺産として懐古的に称揚するだけでは不十分である。重要なのは、この精神を現代のテクノロジーやビジネスモデルと融合させ、新しい持続可能性の形を創造していくことだろう。",
@@ -281,6 +289,87 @@
           "発展途上国に強制的に導入すべき価値観である"
         ],
         "answer": 2
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "若者の読書離れ",
+    "description": "若者の活字離れが叫ばれる中、その実態と背景を読み解く。",
+    "difficulty": 4,
+    "language": "ja",
+    "type": "short",
+    "image": "",
+    "gradient": "linear-gradient(135deg, #4a6fa5, #5b8ec4, #7aadd8)",
+    "content": "「若者の活字離れ」という言葉は、もはや現代日本社会を語る上での定型句となっている。全国大学生協連合会の調査によれば、大学生の1日あたりの平均読書時間はゼロ分という結果がここ数年続いている。その理由として、スマートフォンの普及によるSNSや動画視聴への時間消費、アルバイトや就職活動による時間的余裕のなさ、そして何より「読書の必要性を感じない」という意識の変化が指摘されている。一方で、ライトノベルやWeb小説など、従来の「読書」の枠に収まらない形態での読書はむしろ増加しているという見方もある。識者は、文字文化の衰退を嘆くだけではなく、新しいメディア環境に適応した「読む力」の再定義が必要だと指摘する。",
+    "questions": [
+      {
+        "id": 1,
+        "text": "大学生の1日あたりの平均読書時間について、本文で述べられていることは何か。",
+        "options": ["1時間以上である", "30分程度である", "ゼロ分という結果が続いている", "調査によってばらつきが大きい"],
+        "answer": 2
+      },
+      {
+        "id": 2,
+        "text": "筆者が「新しいメディア環境に適応した『読む力』の再定義」と述べている理由は何か。",
+        "options": ["従来の読書が完全に消滅したから", "ライトノベルやWeb小説など新しい読書形態が増えているから", "スマートフォンを禁止すべきだから", "大学生の読書時間が増加傾向にあるから"],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "「空気を読む」という呪縛",
+    "description": "日本的コミュニケーションの核心にある「空気」の正体と、それがもたらす社会的影響を考察する。",
+    "difficulty": 5,
+    "language": "ja",
+    "type": "integrated",
+    "image": "",
+    "gradient": "linear-gradient(135deg, #5a4a7a, #6e5e96, #8878b5)",
+    "content": "日本の職場や学校で頻繁に使われる「空気を読め」という表現。この一言に込められた同調圧力は、日本社会の円滑な人間関係を支える潤滑油であると同時に、個人の主体性を奪う目に見えない枷でもある。\n\n社会心理学者の山岸俊男は、日本人の行動様式を「集団主義」ではなく「相互協調性」の観点から分析した。すなわち、日本人は自発的に集団に従属するのではなく、他者からの否定的評価を避けるために、周囲の空気を読み取って行動を調整しているというのである。この指摘は、文化本質論的な「日本人論」に一石を投じるものだった。\n\n一方、経営学者の野中郁次郎は、「暗黙知」の概念を用いて、日本的組織の強みを説明する。言葉に明示されない共有了解こそが、迅速な意思決定と柔軟な現場対応を可能にするというのだ。この見方に立てば、「空気を読む」能力は、単なる同調ではなく、高度な状況認識能力として評価されることになる。これら二つの視点を統合することで、「空気」の持つ創造的側面と抑圧的側面の両面を理解することができる。",
+    "questions": [
+      {
+        "id": 1,
+        "text": "山岸俊男の分析と野中郁次郎の分析の相違点として最も適切なものはどれか。",
+        "options": ["空気を読むことの肯定的側面のみに着目している点", "山岸は否定的評価回避、野中は共有了解として空気を捉えている点", "両者とも組織論の観点から分析している点", "日本人を集団主義的と結論づけている点"],
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "text": "本文の主旨として最も適切なものはどれか。",
+        "options": ["空気を読む文化は完全に廃止すべきである", "日本社会の同調圧力は経済成長に不可欠である", "空気を読むことには創造的側面と抑圧的側面の両面がある", "日本人論はすべて誤りであることが証明された"],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "図書館の資料利用案内",
+    "description": "図書館の利用案内から必要な情報を読み取る。",
+    "difficulty": 3,
+    "language": "ja",
+    "type": "search",
+    "image": "",
+    "gradient": "linear-gradient(135deg, #4a7a7a, #5e9696, #78b5b5)",
+    "content": "○○市立図書館　利用案内\n\n■開館時間\n平日（火〜金）9:00〜20:00\n土日祝日 10:00〜18:00\n休館日：毎週月曜日、年末年始（12/28〜1/4）、館内整理日（毎月第3木曜日）\n\n■貸出について\n貸出冊数：1人10冊まで\n貸出期間：2週間（延長は1回のみ可能）\n\n■コピーサービス\n白黒：1枚10円\nカラー：1枚50円\n※著作権法の範囲内で利用可能\n\n■学習室の利用\n個人学習席：50席（先着順、予約不可）\nグループ学習室：3室（要事前予約、1室2時間まで）\n\n■注意事項\n館内での飲食は指定区域のみ可。携帯電話はマナーモードに設定し、通話はロビーのみ。",
+    "questions": [
+      {
+        "id": 1,
+        "text": "日曜日に図書館を利用できる時間帯はどれか。",
+        "options": ["9:00〜20:00", "10:00〜18:00", "9:00〜18:00", "終日休館"],
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "text": "グループ学習室を利用する際に必要なことは何か。",
+        "options": ["学生証の提示", "事前予約", "10名以上の参加者", "利用料金の支払い"],
+        "answer": 1
+      },
+      {
+        "id": 3,
+        "text": "1冊の本を最長で何週間借りられるか。",
+        "options": ["1週間", "2週間", "3週間", "4週間"],
+        "answer": 3
       }
     ]
   }
