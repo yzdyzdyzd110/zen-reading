@@ -1,0 +1,48 @@
+{
+  "format": "zenreading-manifest",
+  "version": 1,
+  "pkgs": [
+    {
+      "id": "default_reading",
+      "path": "data/default_reading.pkg",
+      "enabled": true,
+      "meta": {
+        "name": "样例试题1",
+        "articleCount": 11,
+        "vocabSetCount": 0,
+        "gradient": "linear-gradient(135deg, #5c2e6b, #7e459b, #a068c4)"
+      }
+    },
+    {
+      "id": "default_vocabulary",
+      "path": "data/default_vocabulary.pkg",
+      "enabled": true,
+      "meta": {
+        "name": "Default Vocabulary",
+        "articleCount": 0,
+        "vocabSetCount": 2,
+        "gradient": "linear-gradient(135deg, #8b4557, #b5656d, #d4958a)"
+      }
+    },
+    {
+      "id": "sample_reading_2",
+      "path": "data/sample_reading_2.pkg",
+      "enabled": true,
+      "meta": {
+        "name": "样例试题2",
+        "articleCount": 2,
+        "vocabSetCount": 0
+      }
+    },
+    {
+      "id": "sample_vocabulary_2",
+      "path": "data/sample_vocabulary_2.pkg",
+      "enabled": true,
+      "meta": {
+        "name": "样例词汇2",
+        "articleCount": 0,
+        "vocabSetCount": 1
+      }
+    }
+  ]
+}

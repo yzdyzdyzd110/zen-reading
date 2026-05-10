@@ -1,36 +1,39 @@
-import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import ArticleCard from '../components/ArticleCard';
 import Toolbar from '../components/Toolbar';
-import type { ArticleSummary } from '../types';
+import type { ArticleSummary, ArticleSetSummary } from '../types';
 
 export default function ArticleSetPage() {
   const { id } = useParams<{ id: string }>();
+  const [searchParams] = useSearchParams();
+  const lang = searchParams.get('lang') || '';
   const navigate = useNavigate();
   const [articles, setArticles] = useState<ArticleSummary[]>([]);
+  const [allSets, setAllSets] = useState<ArticleSetSummary[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const setId = Number(id);
-  // Japanese N1 types: ids 10-15 map to type query param
-  const isN1Type = setId >= 10;
-  const N1_TYPE_MAP: Record<number, string> = {
-    10: 'short', 11: 'medium', 12: 'long', 13: 'integrated', 14: 'argument', 15: 'search',
-  };
-  const N1_LABELS: Record<number, string> = {
-    10: '短文理解', 11: '中篇理解', 12: '長篇理解', 13: '統合理解', 14: '主張理解', 15: '情報検索',
-  };
-  const query = isN1Type ? `?type=${N1_TYPE_MAP[setId]}` : `?lang=en`;
-  const title = isN1Type ? (N1_LABELS[setId] || '') : 'English Reading';
-
   useEffect(() => {
-    fetch(`/api/articles${query}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setArticles(data);
+    if (!id) return;
+    setLoading(true);
+    const q = `?setId=${encodeURIComponent(id)}${lang ? `&lang=${encodeURIComponent(lang)}` : ''}`;
+    Promise.all([
+      fetch('/api/articles/sets').then((r) => r.json()),
+      fetch(`/api/articles${q}`).then((r) => r.json()),
+    ])
+      .then(([setsData, articlesData]) => {
+        setAllSets(setsData);
+        setArticles(articlesData);
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [query]);
+  }, [id, lang]);
+
+  const setMeta = useMemo(
+    () => allSets.find((s) => s.id === id && s.language === lang) || allSets.find((s) => s.id === id) || null,
+    [allSets, id, lang],
+  );
+  const title = setMeta?.title || id || '';
 
   return (
     <div className="home-page">

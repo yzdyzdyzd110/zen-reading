@@ -1,52 +1,99 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Toolbar from '../components/Toolbar';
 import type { ArticleSetSummary, VocabSetSummary } from '../types';
 
 type Lang = 'en' | 'ja';
 
-const LANG_LABELS: Record<Lang, { name: string; subtitle: string; sectionTitle: string; sectionDesc: string; vocabTitle: string; vocabDesc: string }> = {
+const LANG_LABELS: Record<Lang, { name: string; subtitle: string; readingTitle: string; vocabTitle: string }> = {
   en: {
     name: 'English',
     subtitle: '禅定阅读 · 沉浸式英语学习',
-    sectionTitle: 'Reading',
-    sectionDesc: 'Select an article set to begin your focused reading session.',
-    vocabTitle: 'Vocabulary',
-    vocabDesc: 'Master essential words with spaced repetition and interactive flashcards.',
+    readingTitle: 'Reading Sets',
+    vocabTitle: 'Vocabulary Sets',
   },
   ja: {
     name: '日本語',
     subtitle: '禅定読書 · 没入型日本語学習',
-    sectionTitle: '読解',
-    sectionDesc: '記事セットを選んで集中読書セッションを始めましょう。',
+    readingTitle: '読解セット',
     vocabTitle: '単語セット',
-    vocabDesc: '単語カードで効率的に語彙を習得しましょう。',
   },
 };
 
+interface ScoreData {
+  score: number;
+  total: number;
+}
+
+function useScore(setId: string, refreshKey: number): ScoreData | null {
+  const [score, setScore] = useState<ScoreData | null>(null);
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(`zenreading-score-${setId}`);
+      setScore(raw ? JSON.parse(raw) : null);
+    } catch { /* ignore */ }
+  }, [setId, refreshKey]);
+  return score;
+}
+
 export default function HomePage() {
-  const [articleSets, setArticleSets] = useState<ArticleSetSummary[]>([]);
-  const [vocabSets, setVocabSets] = useState<VocabSetSummary[]>([]);
+  const [allArticleSets, setAllArticleSets] = useState<ArticleSetSummary[]>([]);
+  const [allVocabSets, setAllVocabSets] = useState<VocabSetSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const [lang, setLang] = useState<Lang>(() => {
     return (localStorage.getItem('zenreading-lang') as Lang) || 'en';
   });
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [refreshKey, setRefreshKey] = useState(0);
+  const menuRef = useRef<HTMLDivElement>(null!);
   const navigate = useNavigate();
 
   useEffect(() => {
-    localStorage.setItem('zenreading-lang', lang);
     setLoading(true);
     Promise.all([
-      fetch(`/api/articles/sets?lang=${lang}`).then((r) => r.json()),
-      fetch(`/api/vocabulary/sets?lang=${lang}`).then((r) => r.json()),
+      fetch('/api/articles/sets').then((r) => r.json()),
+      fetch('/api/vocabulary/sets').then((r) => r.json()),
     ])
       .then(([articlesData, vocabData]) => {
-        setArticleSets(articlesData);
-        setVocabSets(vocabData);
+        setAllArticleSets(articlesData);
+        setAllVocabSets(vocabData);
         setLoading(false);
       })
       .catch(() => setLoading(false));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('zenreading-lang', lang);
   }, [lang]);
+
+  // Close menu on outside click
+  useEffect(() => {
+    if (!activeMenu) return;
+    const handler = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setActiveMenu(null);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, [activeMenu]);
+
+  const articleSets = useMemo(
+    () => allArticleSets.filter((s) => s.language === lang),
+    [allArticleSets, lang],
+  );
+  const vocabSets = useMemo(
+    () => allVocabSets.filter((s) => s.language === lang),
+    [allVocabSets, lang],
+  );
+
+  const clearScore = (setId: string) => {
+    localStorage.removeItem(`zenreading-score-${setId}`);
+    localStorage.removeItem(`zenreading-submitted-${setId}`);
+    localStorage.removeItem(`zenreading-answers-${setId}`);
+    setActiveMenu(null);
+    setRefreshKey((k) => k + 1);
+  };
 
   const labels = LANG_LABELS[lang];
 
@@ -74,25 +121,19 @@ export default function HomePage() {
         <>
           {articleSets.length > 0 && (
             <section className="home-section">
-              <h2 className="section-title">{labels.sectionTitle}</h2>
-              <p className="section-desc">{labels.sectionDesc}</p>
+              <h2 className="section-title">{labels.readingTitle}</h2>
               <div className="vocab-grid">
                 {articleSets.map((set) => (
-                  <div
+                  <ArticleSetCard
                     key={set.id}
-                    className="vocab-card"
-                    style={{ background: set.gradient }}
-                    onClick={() => navigate(`/read-set/${set.id}`)}
-                  >
-                    <div className="vocab-card-inner">
-                      <h3>{set.title}</h3>
-                      <p>{set.description}</p>
-                      <div className="vocab-card-footer">
-                        <span className="vocab-count">{set.articleCount} articles</span>
-                        <span className="enter-btn">選択 →</span>
-                      </div>
-                    </div>
-                  </div>
+                    set={set}
+                    refreshKey={refreshKey}
+                    navigate={navigate}
+                    activeMenu={activeMenu}
+                    onMenuToggle={() => setActiveMenu(activeMenu === set.id ? null : set.id)}
+                    onClearScore={() => clearScore(set.id)}
+                    menuRef={menuRef}
+                  />
                 ))}
               </div>
             </section>
@@ -101,7 +142,6 @@ export default function HomePage() {
           {vocabSets.length > 0 && (
             <section className="home-section">
               <h2 className="section-title">{labels.vocabTitle}</h2>
-              <p className="section-desc">{labels.vocabDesc}</p>
               <div className="vocab-grid">
                 {vocabSets.map((set) => (
                   <div
@@ -127,6 +167,69 @@ export default function HomePage() {
       )}
 
       <Toolbar />
+    </div>
+  );
+}
+
+function ArticleSetCard({
+  set,
+  refreshKey,
+  navigate,
+  activeMenu,
+  onMenuToggle,
+  onClearScore,
+  menuRef,
+}: {
+  set: ArticleSetSummary;
+  refreshKey: number;
+  navigate: ReturnType<typeof useNavigate>;
+  activeMenu: string | null;
+  onMenuToggle: () => void;
+  onClearScore: () => void;
+  menuRef: React.RefObject<HTMLDivElement>;
+}) {
+  const score = useScore(set.id, refreshKey);
+  const isMenuOpen = activeMenu === set.id;
+
+  return (
+    <div
+      className="vocab-card"
+      style={{ background: set.gradient, zIndex: isMenuOpen ? 100 : undefined }}
+      onClick={() => navigate(`/read-set/${set.id}?lang=${set.language}`)}
+    >
+      {/* Three-dot menu */}
+      <div className="card-menu" ref={menuRef}>
+        <button
+          className="card-menu-btn"
+          onClick={(e) => { e.stopPropagation(); onMenuToggle(); }}
+        >
+          ⋮
+        </button>
+        {isMenuOpen && (
+          <div className="card-menu-dropdown">
+            <button
+              className="card-menu-item"
+              onClick={(e) => { e.stopPropagation(); onClearScore(); }}
+            >
+              清除历史分数
+            </button>
+          </div>
+        )}
+      </div>
+
+      <div className="vocab-card-inner">
+        <h3>{set.title}</h3>
+        <p>{set.description}</p>
+        <div className="vocab-card-footer">
+          <span className="vocab-count">{set.articleCount} articles</span>
+          <span className="enter-btn">選択 →</span>
+        </div>
+        {score && (
+          <div className="card-score">
+            得分：{score.score}/{score.total}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

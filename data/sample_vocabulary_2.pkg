@@ -1,0 +1,333 @@
+{
+  "format": "zenreading-pkg",
+  "version": 1,
+  "meta": {
+    "name": "样例词汇2",
+    "description": "第二套日语词汇集。N1-N2补充単語。",
+    "gradient": "linear-gradient(135deg, #6b3a5a, #8b5578, #b57898)"
+  },
+  "articles": [],
+  "vocabularySets": [
+    {
+      "id": 1,
+      "title": "N1 補充語彙",
+      "description": "日本語能力試験N1レベルの追加単語50選",
+      "language": "ja",
+      "gradient": "linear-gradient(135deg, #6b3a5a, #8b5578, #b57898)",
+      "lists": [
+        {
+          "id": 1,
+          "title": "N1 補充 List 1",
+          "words": [
+            {
+              "id": 1,
+              "word": "均衡",
+              "reading": "きんこう",
+              "meaning": "均衡、平衡"
+            },
+            {
+              "id": 2,
+              "word": "抑制",
+              "reading": "よくせい",
+              "meaning": "抑制、控制"
+            },
+            {
+              "id": 3,
+              "word": "是正",
+              "reading": "ぜせい",
+              "meaning": "纠正、更正"
+            },
+            {
+              "id": 4,
+              "word": "革新",
+              "reading": "かくしん",
+              "meaning": "革新、改革"
+            },
+            {
+              "id": 5,
+              "word": "向上",
+              "reading": "こうじょう",
+              "meaning": "向上、提高"
+            },
+            {
+              "id": 6,
+              "word": "衰退",
+              "reading": "すいたい",
+              "meaning": "衰退、衰落"
+            },
+            {
+              "id": 7,
+              "word": "繁栄",
+              "reading": "はんえい",
+              "meaning": "繁荣、兴旺"
+            },
+            {
+              "id": 8,
+              "word": "没落",
+              "reading": "ぼつらく",
+              "meaning": "没落、衰败"
+            },
+            {
+              "id": 9,
+              "word": "変遷",
+              "reading": "へんせん",
+              "meaning": "变迁、演变"
+            },
+            {
+              "id": 10,
+              "word": "推移",
+              "reading": "すいい",
+              "meaning": "推移、变迁"
+            },
+            {
+              "id": 11,
+              "word": "兆し",
+              "reading": "きざし",
+              "meaning": "兆头、迹象"
+            },
+            {
+              "id": 12,
+              "word": "端緒",
+              "reading": "たんしょ",
+              "meaning": "端绪、线索"
+            },
+            {
+              "id": 13,
+              "word": "契機",
+              "reading": "けいき",
+              "meaning": "契机、机会"
+            },
+            {
+              "id": 14,
+              "word": "岐路",
+              "reading": "きろ",
+              "meaning": "歧路、岔路口"
+            },
+            {
+              "id": 15,
+              "word": "渦中",
+              "reading": "かちゅう",
+              "meaning": "漩涡之中"
+            },
+            {
+              "id": 16,
+              "word": "瀬戸際",
+              "reading": "せとぎわ",
+              "meaning": "紧要关头"
+            },
+            {
+              "id": 17,
+              "word": "過渡期",
+              "reading": "かとき",
+              "meaning": "过渡期"
+            },
+            {
+              "id": 18,
+              "word": "瀬踏み",
+              "reading": "せぶみ",
+              "meaning": "试探、摸底"
+            },
+            {
+              "id": 19,
+              "word": "仕掛け",
+              "reading": "しかけ",
+              "meaning": "装置、机关"
+            },
+            {
+              "id": 20,
+              "word": "枠組み",
+              "reading": "わくぐみ",
+              "meaning": "框架、结构"
+            },
+            {
+              "id": 21,
+              "word": "骨子",
+              "reading": "こっし",
+              "meaning": "要点、纲要"
+            },
+            {
+              "id": 22,
+              "word": "趣旨",
+              "reading": "しゅし",
+              "meaning": "宗旨、旨趣"
+            },
+            {
+              "id": 23,
+              "word": "指針",
+              "reading": "ししん",
+              "meaning": "指针、指南"
+            },
+            {
+              "id": 24,
+              "word": "方策",
+              "reading": "ほうさく",
+              "meaning": "方策、对策"
+            },
+            {
+              "id": 25,
+              "word": "施策",
+              "reading": "しさく",
+              "meaning": "施策、措施"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "N1 補充 List 2",
+          "words": [
+            {
+              "id": 26,
+              "word": "踏まえる",
+              "reading": "ふまえる",
+              "meaning": "根据、依据"
+            },
+            {
+              "id": 27,
+              "word": "鑑みる",
+              "reading": "かんがみる",
+              "meaning": "鉴于、考虑到"
+            },
+            {
+              "id": 28,
+              "word": "準じる",
+              "reading": "じゅんじる",
+              "meaning": "以...为标准"
+            },
+            {
+              "id": 29,
+              "word": "準拠",
+              "reading": "じゅんきょ",
+              "meaning": "遵照、依据"
+            },
+            {
+              "id": 30,
+              "word": "即する",
+              "reading": "そくする",
+              "meaning": "切合、符合"
+            },
+            {
+              "id": 31,
+              "word": "則る",
+              "reading": "のっとる",
+              "meaning": "遵守、遵循"
+            },
+            {
+              "id": 32,
+              "word": "逸脱",
+              "reading": "いつだつ",
+              "meaning": "偏离、脱离"
+            },
+            {
+              "id": 33,
+              "word": "遊離",
+              "reading": "ゆうり",
+              "meaning": "游离、脱离"
+            },
+            {
+              "id": 34,
+              "word": "乖離",
+              "reading": "かいり",
+              "meaning": "背离、乖离"
+            },
+            {
+              "id": 35,
+              "word": "隔絶",
+              "reading": "かくぜつ",
+              "meaning": "隔絶、隔绝"
+            },
+            {
+              "id": 36,
+              "word": "断絶",
+              "reading": "だんぜつ",
+              "meaning": "断绝"
+            },
+            {
+              "id": 37,
+              "word": "途絶",
+              "reading": "とだえ",
+              "meaning": "中断、断绝"
+            },
+            {
+              "id": 38,
+              "word": "瀕する",
+              "reading": "ひんする",
+              "meaning": "濒临、濒于"
+            },
+            {
+              "id": 39,
+              "word": "準ずる",
+              "reading": "じゅんずる",
+              "meaning": "以...为标准"
+            },
+            {
+              "id": 40,
+              "word": "匹敵",
+              "reading": "ひってき",
+              "meaning": "匹敌、比得上"
+            },
+            {
+              "id": 41,
+              "word": "凌駕",
+              "reading": "りょうが",
+              "meaning": "凌驾、超过"
+            },
+            {
+              "id": 42,
+              "word": "卓越",
+              "reading": "たくえつ",
+              "meaning": "卓越、杰出"
+            },
+            {
+              "id": 43,
+              "word": "秀でる",
+              "reading": "ひいでる",
+              "meaning": "优秀、出众"
+            },
+            {
+              "id": 44,
+              "word": "遥か",
+              "reading": "はるか",
+              "meaning": "遥远、远远"
+            },
+            {
+              "id": 45,
+              "word": "截然",
+              "reading": "せつぜん",
+              "meaning": "截然、分明"
+            },
+            {
+              "id": 46,
+              "word": "画期",
+              "reading": "かっき",
+              "meaning": "划时代"
+            },
+            {
+              "id": 47,
+              "word": "先駆",
+              "reading": "せんく",
+              "meaning": "先驱"
+            },
+            {
+              "id": 48,
+              "word": "黎明",
+              "reading": "れいめい",
+              "meaning": "黎明、开端"
+            },
+            {
+              "id": 49,
+              "word": "嚆矢",
+              "reading": "こうし",
+              "meaning": "嚆矢、开端"
+            },
+            {
+              "id": 50,
+              "word": "魁",
+              "reading": "さきがけ",
+              "meaning": "先驱、率先"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

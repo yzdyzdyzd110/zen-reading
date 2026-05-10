@@ -67,6 +67,9 @@ jobs:
       - name: Package Launcher
         run: python launcher/build.py
 
+      - name: Ad-hoc sign (remove Gatekeeper warning)
+        run: codesign --force --deep --sign - release/ZenReading/ZenReading.app
+
       - uses: actions/upload-artifact@v4
         with:
           name: ZenReading-Mac

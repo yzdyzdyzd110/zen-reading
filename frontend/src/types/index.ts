@@ -1,5 +1,6 @@
 export interface ArticleSummary {
   id: number;
+  setId: string;
   title: string;
   description: string;
   difficulty: number;
@@ -14,6 +15,7 @@ export interface Question {
   text: string;
   options: string[];
   answer: number;
+  score?: number;
 }
 
 export interface Article extends ArticleSummary {
@@ -22,7 +24,7 @@ export interface Article extends ArticleSummary {
 }
 
 export interface ArticleSetSummary {
-  id: number;
+  id: string;
   title: string;
   description: string;
   language: string;

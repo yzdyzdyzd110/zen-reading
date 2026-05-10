@@ -1,0 +1,654 @@
+{
+  "format": "zenreading-pkg",
+  "version": 1,
+  "meta": {
+    "name": "Default Vocabulary",
+    "description": "Built-in Japanese vocabulary sets.",
+    "gradient": "linear-gradient(135deg, #8b4557, #b5656d, #d4958a)"
+  },
+  "articles": [],
+  "vocabularySets": [
+    {
+      "id": 1,
+      "title": "N1 重要語彙",
+      "description": "日本語能力試験N1レベルの頻出単語100選",
+      "language": "ja",
+      "gradient": "linear-gradient(135deg, #8b4557, #b5656d, #d4958a)",
+      "lists": [
+        {
+          "id": 1,
+          "title": "N1 語彙 List 1",
+          "words": [
+            {
+              "id": 1,
+              "word": "抽象",
+              "reading": "ちゅうしょう",
+              "meaning": "抽象"
+            },
+            {
+              "id": 2,
+              "word": "是正",
+              "reading": "ぜせい",
+              "meaning": "纠正、更正"
+            },
+            {
+              "id": 3,
+              "word": "提唱",
+              "reading": "ていしょう",
+              "meaning": "提倡、倡导"
+            },
+            {
+              "id": 4,
+              "word": "打破",
+              "reading": "だは",
+              "meaning": "打破、破除"
+            },
+            {
+              "id": 5,
+              "word": "波及",
+              "reading": "はきゅう",
+              "meaning": "波及、影响"
+            },
+            {
+              "id": 6,
+              "word": "憂慮",
+              "reading": "ゆうりょ",
+              "meaning": "忧虑、担忧"
+            },
+            {
+              "id": 7,
+              "word": "風潮",
+              "reading": "ふうちょう",
+              "meaning": "风潮、潮流"
+            },
+            {
+              "id": 8,
+              "word": "提言",
+              "reading": "ていげん",
+              "meaning": "建言、提议"
+            },
+            {
+              "id": 9,
+              "word": "局面",
+              "reading": "きょくめん",
+              "meaning": "局面、局势"
+            },
+            {
+              "id": 10,
+              "word": "兆候",
+              "reading": "ちょうこう",
+              "meaning": "征兆、迹象"
+            },
+            {
+              "id": 11,
+              "word": "照合",
+              "reading": "しょうごう",
+              "meaning": "核对、对照"
+            },
+            {
+              "id": 12,
+              "word": "阻害",
+              "reading": "そがい",
+              "meaning": "阻碍、妨碍"
+            },
+            {
+              "id": 13,
+              "word": "窮乏",
+              "reading": "きゅうぼう",
+              "meaning": "穷困、贫困"
+            },
+            {
+              "id": 14,
+              "word": "軋轢",
+              "reading": "あつれき",
+              "meaning": "摩擦、不和"
+            },
+            {
+              "id": 15,
+              "word": "相克",
+              "reading": "そうこく",
+              "meaning": "相克、矛盾"
+            },
+            {
+              "id": 16,
+              "word": "寥々",
+              "reading": "りょうりょう",
+              "meaning": "寥寥无几"
+            },
+            {
+              "id": 17,
+              "word": "可塑",
+              "reading": "かそ",
+              "meaning": "可塑、可塑性"
+            },
+            {
+              "id": 18,
+              "word": "敷衍",
+              "reading": "ふえん",
+              "meaning": "敷衍、详述"
+            },
+            {
+              "id": 19,
+              "word": "醸成",
+              "reading": "じょうせい",
+              "meaning": "酝酿、逐渐形成"
+            },
+            {
+              "id": 20,
+              "word": "踏襲",
+              "reading": "とうしゅう",
+              "meaning": "沿袭、继承"
+            },
+            {
+              "id": 21,
+              "word": "摸索",
+              "reading": "もさく",
+              "meaning": "摸索、探索"
+            },
+            {
+              "id": 22,
+              "word": "還元",
+              "reading": "かんげん",
+              "meaning": "还原、回馈"
+            },
+            {
+              "id": 23,
+              "word": "弁済",
+              "reading": "べんさい",
+              "meaning": "偿还、清偿"
+            },
+            {
+              "id": 24,
+              "word": "耽読",
+              "reading": "たんどく",
+              "meaning": "耽读、沉迷阅读"
+            },
+            {
+              "id": 25,
+              "word": "蛇足",
+              "reading": "だそく",
+              "meaning": "画蛇添足"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "N1 語彙 List 2",
+          "words": [
+            {
+              "id": 26,
+              "word": "示唆",
+              "reading": "しさ",
+              "meaning": "暗示、启发"
+            },
+            {
+              "id": 27,
+              "word": "拮抗",
+              "reading": "きっこう",
+              "meaning": "抗衡、势均力敌"
+            },
+            {
+              "id": 28,
+              "word": "趨勢",
+              "reading": "すうせい",
+              "meaning": "趋势、动向"
+            },
+            {
+              "id": 29,
+              "word": "濫用",
+              "reading": "らんよう",
+              "meaning": "滥用"
+            },
+            {
+              "id": 30,
+              "word": "斡旋",
+              "reading": "あっせん",
+              "meaning": "斡旋、介绍"
+            },
+            {
+              "id": 31,
+              "word": "委託",
+              "reading": "いたく",
+              "meaning": "委托"
+            },
+            {
+              "id": 32,
+              "word": "胚胎",
+              "reading": "はいたい",
+              "meaning": "胚胎、萌芽"
+            },
+            {
+              "id": 33,
+              "word": "翻弄",
+              "reading": "ほんろう",
+              "meaning": "摆布、捉弄"
+            },
+            {
+              "id": 34,
+              "word": "頒布",
+              "reading": "はんぷ",
+              "meaning": "分发、颁布"
+            },
+            {
+              "id": 35,
+              "word": "附与",
+              "reading": "ふよ",
+              "meaning": "授予、赋予"
+            },
+            {
+              "id": 36,
+              "word": "畏縮",
+              "reading": "いしゅく",
+              "meaning": "畏缩、退缩"
+            },
+            {
+              "id": 37,
+              "word": "乖離",
+              "reading": "かいり",
+              "meaning": "背离、乖离"
+            },
+            {
+              "id": 38,
+              "word": "諮問",
+              "reading": "しもん",
+              "meaning": "咨询"
+            },
+            {
+              "id": 39,
+              "word": "質疑",
+              "reading": "しつぎ",
+              "meaning": "质疑、提问"
+            },
+            {
+              "id": 40,
+              "word": "交付",
+              "reading": "こうふ",
+              "meaning": "交付、发给"
+            },
+            {
+              "id": 41,
+              "word": "明瞭",
+              "reading": "めいりょう",
+              "meaning": "明了、清晰"
+            },
+            {
+              "id": 42,
+              "word": "錯綜",
+              "reading": "さくそう",
+              "meaning": "错综复杂"
+            },
+            {
+              "id": 43,
+              "word": "委細",
+              "reading": "いさい",
+              "meaning": "详情、详细"
+            },
+            {
+              "id": 44,
+              "word": "陶冶",
+              "reading": "とうや",
+              "meaning": "陶冶、培养"
+            },
+            {
+              "id": 45,
+              "word": "邁進",
+              "reading": "まいしん",
+              "meaning": "迈进、奋勇前进"
+            },
+            {
+              "id": 46,
+              "word": "濁流",
+              "reading": "だくりゅう",
+              "meaning": "浊流"
+            },
+            {
+              "id": 47,
+              "word": "明示",
+              "reading": "めいじ",
+              "meaning": "明示、明确表示"
+            },
+            {
+              "id": 48,
+              "word": "介在",
+              "reading": "かいざい",
+              "meaning": "介于其间"
+            },
+            {
+              "id": 49,
+              "word": "罷免",
+              "reading": "ひめん",
+              "meaning": "罢免"
+            },
+            {
+              "id": 50,
+              "word": "遊説",
+              "reading": "ゆうぜい",
+              "meaning": "游说"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "N2 必須語彙",
+      "description": "日本語能力試験N2レベルの必須単語100選",
+      "language": "ja",
+      "gradient": "linear-gradient(135deg, #5c4a3a, #7d6b52, #a89878)",
+      "lists": [
+        {
+          "id": 3,
+          "title": "N2 語彙 List 1",
+          "words": [
+            {
+              "id": 1,
+              "word": "見解",
+              "reading": "けんかい",
+              "meaning": "见解、看法"
+            },
+            {
+              "id": 2,
+              "word": "賞味",
+              "reading": "しょうみ",
+              "meaning": "品尝、赏味"
+            },
+            {
+              "id": 3,
+              "word": "接続",
+              "reading": "せつぞく",
+              "meaning": "连接、接续"
+            },
+            {
+              "id": 4,
+              "word": "克服",
+              "reading": "こくふく",
+              "meaning": "克服"
+            },
+            {
+              "id": 5,
+              "word": "貢献",
+              "reading": "こうけん",
+              "meaning": "贡献"
+            },
+            {
+              "id": 6,
+              "word": "是認",
+              "reading": "ぜにん",
+              "meaning": "认可、同意"
+            },
+            {
+              "id": 7,
+              "word": "享受",
+              "reading": "きょうじゅ",
+              "meaning": "享受"
+            },
+            {
+              "id": 8,
+              "word": "阻む",
+              "reading": "はばむ",
+              "meaning": "阻止、阻挡"
+            },
+            {
+              "id": 9,
+              "word": "潤う",
+              "reading": "うるおう",
+              "meaning": "滋润、得益"
+            },
+            {
+              "id": 10,
+              "word": "掲げる",
+              "reading": "かかげる",
+              "meaning": "悬挂、提出"
+            },
+            {
+              "id": 11,
+              "word": "賄う",
+              "reading": "まかなう",
+              "meaning": "供给、维持"
+            },
+            {
+              "id": 12,
+              "word": "疎か",
+              "reading": "おろそか",
+              "meaning": "疏忽、不认真"
+            },
+            {
+              "id": 13,
+              "word": "欺く",
+              "reading": "あざむく",
+              "meaning": "欺骗"
+            },
+            {
+              "id": 14,
+              "word": "潔い",
+              "reading": "いさぎよい",
+              "meaning": "干脆、清高"
+            },
+            {
+              "id": 15,
+              "word": "奢る",
+              "reading": "おごる",
+              "meaning": "请客、奢侈"
+            },
+            {
+              "id": 16,
+              "word": "尽くす",
+              "reading": "つくす",
+              "meaning": "尽、竭尽"
+            },
+            {
+              "id": 17,
+              "word": "促す",
+              "reading": "うながす",
+              "meaning": "促使、催促"
+            },
+            {
+              "id": 18,
+              "word": "携わる",
+              "reading": "たずさわる",
+              "meaning": "参与、从事"
+            },
+            {
+              "id": 19,
+              "word": "覆す",
+              "reading": "くつがえす",
+              "meaning": "推翻、颠覆"
+            },
+            {
+              "id": 20,
+              "word": "滞る",
+              "reading": "とどこおる",
+              "meaning": "拖延、停滞"
+            },
+            {
+              "id": 21,
+              "word": "労る",
+              "reading": "いたわる",
+              "meaning": "照顾、慰劳"
+            },
+            {
+              "id": 22,
+              "word": "志す",
+              "reading": "こころざす",
+              "meaning": "立志、志向"
+            },
+            {
+              "id": 23,
+              "word": "弁える",
+              "reading": "わきまえる",
+              "meaning": "辨别、懂得"
+            },
+            {
+              "id": 24,
+              "word": "報じる",
+              "reading": "ほうじる",
+              "meaning": "报答、报告"
+            },
+            {
+              "id": 25,
+              "word": "紛れる",
+              "reading": "まぎれる",
+              "meaning": "混淆、消解"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "N2 語彙 List 2",
+          "words": [
+            {
+              "id": 26,
+              "word": "途切れる",
+              "reading": "とぎれる",
+              "meaning": "间断、中断"
+            },
+            {
+              "id": 27,
+              "word": "留める",
+              "reading": "とどめる",
+              "meaning": "停下、留下"
+            },
+            {
+              "id": 28,
+              "word": "映える",
+              "reading": "はえる",
+              "meaning": "映照、显眼"
+            },
+            {
+              "id": 29,
+              "word": "慕う",
+              "reading": "したう",
+              "meaning": "爱慕、怀念"
+            },
+            {
+              "id": 30,
+              "word": "背く",
+              "reading": "そむく",
+              "meaning": "违背、背叛"
+            },
+            {
+              "id": 31,
+              "word": "預かる",
+              "reading": "あずかる",
+              "meaning": "保管、负责"
+            },
+            {
+              "id": 32,
+              "word": "著しい",
+              "reading": "いちじるしい",
+              "meaning": "显著、明显"
+            },
+            {
+              "id": 33,
+              "word": "快い",
+              "reading": "こころよい",
+              "meaning": "愉快、爽快"
+            },
+            {
+              "id": 34,
+              "word": "渇く",
+              "reading": "かわく",
+              "meaning": "干渴、渴望"
+            },
+            {
+              "id": 35,
+              "word": "試みる",
+              "reading": "こころみる",
+              "meaning": "尝试"
+            },
+            {
+              "id": 36,
+              "word": "率いる",
+              "reading": "ひきいる",
+              "meaning": "率领"
+            },
+            {
+              "id": 37,
+              "word": "臨む",
+              "reading": "のぞむ",
+              "meaning": "面临、出席"
+            },
+            {
+              "id": 38,
+              "word": "挑む",
+              "reading": "いどむ",
+              "meaning": "挑战、挑起"
+            },
+            {
+              "id": 39,
+              "word": "操る",
+              "reading": "あやつる",
+              "meaning": "操纵、掌握"
+            },
+            {
+              "id": 40,
+              "word": "繕う",
+              "reading": "つくろう",
+              "meaning": "修补、敷衍"
+            },
+            {
+              "id": 41,
+              "word": "顧みる",
+              "reading": "かえりみる",
+              "meaning": "回顾、反省"
+            },
+            {
+              "id": 42,
+              "word": "遂げる",
+              "reading": "とげる",
+              "meaning": "完成、达到"
+            },
+            {
+              "id": 43,
+              "word": "掲載",
+              "reading": "けいさい",
+              "meaning": "登载、刊载"
+            },
+            {
+              "id": 44,
+              "word": "捗る",
+              "reading": "はかどる",
+              "meaning": "进展顺利"
+            },
+            {
+              "id": 45,
+              "word": "憚る",
+              "reading": "はばかる",
+              "meaning": "顾忌、顾虑"
+            },
+            {
+              "id": 46,
+              "word": "俯く",
+              "reading": "うつむく",
+              "meaning": "低头、俯首"
+            },
+            {
+              "id": 47,
+              "word": "煌びやか",
+              "reading": "きらびやか",
+              "meaning": "光辉灿烂、华丽"
+            },
+            {
+              "id": 48,
+              "word": "諦める",
+              "reading": "あきらめる",
+              "meaning": "放弃、死心"
+            },
+            {
+              "id": 49,
+              "word": "施す",
+              "reading": "ほどこす",
+              "meaning": "施、施行"
+            },
+            {
+              "id": 50,
+              "word": "彩る",
+              "reading": "いろどる",
+              "meaning": "上色、装饰"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+import { initData } from './dataStore';
 import articlesRouter from './routes/articles';
 import vocabularyRouter from './routes/vocabulary';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+initData(path.join(__dirname, '..', '..'));
 
 app.use(cors());
 app.use(express.json());

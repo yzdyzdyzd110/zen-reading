@@ -90,20 +90,32 @@ def assemble_release():
     for src, dst_name in [
         ('server.js', 'server.js'),
         ('package.json', 'package.json'),
+        ('manifest.json', 'manifest.json'),
     ]:
         s = os.path.join(ROOT, src)
         if os.path.exists(s):
             shutil.copy2(s, os.path.join(release_dir, dst_name))
 
+    # Loader modules (CommonJS, required by server.js and dataStore.js)
+    for src, dst_name in [
+        ('backend/src/pkgLoader.js', 'backend/src/pkgLoader.js'),
+        ('backend/src/dataStore.js', 'backend/src/dataStore.js'),
+    ]:
+        s = os.path.join(ROOT, src)
+        d = os.path.join(release_dir, dst_name)
+        if os.path.exists(s):
+            os.makedirs(os.path.dirname(d), exist_ok=True)
+            shutil.copy2(s, d)
+
     # Node.js runtime
     node_runtime = os.path.join(DIST_DIR, 'node_runtime')
     if os.path.exists(node_runtime):
-        shutil.copytree(node_runtime, os.path.join(release_dir, 'node_runtime'))
+        shutil.copytree(node_runtime, os.path.join(release_dir, 'node_runtime'), dirs_exist_ok=True)
 
     # Directories
     for src, dst_name in [
         ('frontend/dist', 'frontend/dist'),
-        ('backend/src/data', 'backend/src/data'),
+        ('data', 'data'),
         ('node_modules', 'node_modules'),
     ]:
         s = os.path.join(ROOT, src)
